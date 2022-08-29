@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .top-blob {
+        width: 300px;
+        height: 300px;
+        background-color: #fbcfe8;
+        position: absolute;
+        top: -70px;
+        right: -70px;
+        border-radius: 0 0 0 100%;
+        animation: top-scale 15s ease infinite;
+    }
+    @keyframes top-scale {
+        0%, 100% {
+            transform: scale(0.8);
+        }
+        50% {
+            transform: scale(1.3);
+        }
+    }
+    .bottom-blob {
+        width: 400px;
+        height: 300px;
+        background-color: #fed7aa;
+        position: absolute;
+        bottom: -50px;
+        left: -150px;
+        border-radius:70% 35% 65% 0;
+        animation: rotate 15s ease infinite;
+    }
+    @keyframes rotate {
+        0%, 100% {
+            transform: rotate(-20deg);
+        }
+        50% {
+            transform: rotate(20deg);
+        }
+    }
+    .idea {
+        animation: idea 5s ease infinite;
+    }
+    @keyframes idea {
+        0%, 100% {
+            transform: scale(0.8)
+        }
+        50% {
+            transform: scale(1.1)
+        }
+    }
+}
