@@ -666,6 +666,14 @@ video {
   bottom: 0px;
 }
 
+.z-\[999\] {
+  z-index: 999;
+}
+
+.z-\[2\] {
+  z-index: 2;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
