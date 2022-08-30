@@ -4,7 +4,7 @@ import HomePage from "./components/HomePage"
 
 export default function App() {
     return (
-        <main className="px-[15px] sm:px-0">
+        <main className="px-[25px] sm:px-0">
             <FirstPage/>
             <HomePage/>
         </main>

@@ -11,9 +11,13 @@
         question: "How many colors are there in a rainbow?"
         type: "multiple"
         */
-    //make a check answer button to reveal right and wrong answers
-    //once clicked, the btn should show "play again"
-    //once clicked, should also render a paragarph showing the score
-    //..
+    //render each options !!!!!!!!!!!!!!
+    //render the correct answer indexed in randomly for each quest component by..
+    //..create an allOptions array, push in all incorrect answers and correct asnwer
+
+    //make a check answer button to reveal right and wrong answers 
+        //once clicked, the btn should show "play again"
+        //once clicked, should also render a paragarph showing the score
+
     //the play again btn should reset back to the home page
-    //-with another 5 random objects in the data array
+        //-with another 5 random objects in the data array
