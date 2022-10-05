@@ -3,12 +3,18 @@ import Option from "./Option"
 
 export default function Quest(props) {
 
-  //let randomOptions = randomArrayShuffle(props.optionsJioned[props.index]);
+    const [clicked, setClicked] = React.useState(false)
+    function handleClick(index) {
+        setClicked(prevState => !prevState)
+    }
   
-    const options = props.optionsJoined[props.index]?.map(item => {
+    const options = props.optionsJoined[props.index]?.map((item, index) => {
         return (<Option
             key={item}
             item={item}
+            index={index}
+            handleClick={handleClick}
+            clicked={clicked}
         />)
     })
     //console.log(options)

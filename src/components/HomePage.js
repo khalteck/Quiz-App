@@ -68,6 +68,14 @@ export default function HomePage() {
     console.log(questData)
     
 
+    //function to calculate scores and responses
+    
+
+    /*function calcScores(index) {
+        const newArr = [...optionsJoined];
+        newArr[index].push()
+    }*/
+
     //to map over questdata array 
     const eachQuestion = questData.questionBox?.map((item, index) => {
         return (
