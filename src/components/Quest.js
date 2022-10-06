@@ -3,18 +3,19 @@ import Option from "./Option"
 
 export default function Quest(props) {
 
-    const [clicked, setClicked] = React.useState(false)
-    function handleClick(index) {
-        setClicked(prevState => !prevState)
-    }
+    //const [clicked, setClicked] = React.useState(false)
+   // function handleClick(index) {
+       // props.optionsJoined[props.index]?.map((item, index) => {
+        //    return;
+       // })
+    //}
   
     const options = props.optionsJoined[props.index]?.map((item, index) => {
         return (<Option
-            key={item}
+            key={index}
             item={item}
             index={index}
-            handleClick={handleClick}
-            clicked={clicked}
+            onClick={() => {props.selected(item);}}
         />)
     })
     //console.log(options)

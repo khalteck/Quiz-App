@@ -65,16 +65,27 @@ export default function HomePage() {
         } 
         setOptionsJoined(allOptions())//setting optionsJoined to an array off 5 joined options arrayss
     }, [questData])
-    console.log(questData)
+    //console.log(questData)
     
 
     //function to calculate scores and responses
-    
+    function calcScores(answer, correctAns) {
+        if (answer === correctAns) {
+            setquestData(prevState => {
+                return {
+                    ...prevState,
+                    score: questData.score + 1
+                }
+            });
+        }
+        setquestData(prevState => {
+            return {
+                ...prevState,
+                response: questData.response < 5 ? questData.response + 1 : 5
+            }
+        });
+    }
 
-    /*function calcScores(index) {
-        const newArr = [...optionsJoined];
-        newArr[index].push()
-    }*/
 
     //to map over questdata array 
     const eachQuestion = questData.questionBox?.map((item, index) => {
@@ -84,6 +95,11 @@ export default function HomePage() {
                 item={item}
                 index={index}
                 optionsJoined={optionsJoined}
+                selected={answer => {
+                    calcScores(answer, questData.questionBox.correct_answer);
+                    console.log(questData.response)
+                    console.log(questData.score)
+                }}
             />
         )
     }) 
@@ -97,9 +113,9 @@ export default function HomePage() {
                 {error && <div className="w-full h-[200px] flex justify-center items-center text-center text-[30px] font-[700]">Unable to connect<br/> Refresh the browser to try again..</div>}
                 {questData.questionBox && eachQuestion}
                 <div className="w-full text-center">
-                    <button 
+                    { questData.questionBox && <button 
                     className="mt-3 py-3 px-8 bg-fuchsia-900 hover:bg-fuchsia-600 text-white text-[13px] rounded-lg shadow-md"
-                    >Check answers</button>
+                    >Check answers</button>}
                 </div>
             </section>
         </main>

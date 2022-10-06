@@ -13,7 +13,10 @@
         */
     //render each options !!!!!!!!!!!!!!
     //render the correct answer indexed in randomly for each quest component by..
-    //..create an allOptions array, push in all incorrect answers and correct asnwer
+    //..create an allOptions array, push in all incorrect answers and correct asnwer *********************************
+
+    //change the color of each clicked option 
+        //and compute responses and scores
 
     //make a check answer button to reveal right and wrong answers 
         //once clicked, the btn should show "play again"
